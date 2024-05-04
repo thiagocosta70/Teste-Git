@@ -1,0 +1,59 @@
+body{
+    background-color: yellow;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1 {
+    color: red;
+}
+p1 {
+    color: green;
+}
+p2 {
+    color:rgb(59, 47, 173);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+p3 {
+    color: #FFFFFF;
+  font-family: Lato;
+  font-size: 14px;
+  line-height: 22px;
+  width: 358px;
+  text-align: center;
+}
+p4 {
+    background-color: lightgray;
+
+}
+.destaque {
+    color:blue
+}
+#conteudo {
+    width; 70%;
+    background-color: white;
+    float :left
+}
+#menucontexto {
+    width; 10%;
+    background-color: green;
+    float :right
+
+}
+table {
+    width: 100%;
+   
+}
+table caption{
+    font-weight: bolder;
+    font-size: 30px;
+}
+th {
+    background-color: gray;
+    color: black;
+}
+td {
+    background-color: lightblue;
+    color: black;
+}

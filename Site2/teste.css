@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    
+    width: 100%;
+    height: calc(100% - 40px);
+  }
+  
+  :root {
+    --max-branco: #fff;
+    --branco: #f2f2f2;
+    --cinza: #e4e4e4;
+    --vermelho-claro: #f7dcdc;
+    --vermelho-medio: #d74f4f;
+    --vermelho-escuro: #b13a3a;
+    --vermelho-escuro-2: #750000;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--branco);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--vermelho-escuro);
+    border: 0.2rem solid var(--branco);
+  }
+  
+  .section__height {
+    height: calc(100vh - 250px);
+  }
+  
+  .navbar-nav > .nav-item a {
+    font-weight: 500;
+    transition: ease-in-out 0.2s;
+  }
+  
+  .navbar-nav > .nav-item a:hover {
+    color: var(--vermelho-medio);
+  }
+  
+  footer > .container > .nav > .nav-item > .nav-link {
+    color: var(--vermelho-medio);
+    transition: ease-in-out 0.2s;
+  }
+  
+  footer > .container > .nav > .nav-item > .nav-link:hover {
+    color: var(--vermelho-escuro);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    font-family: "Arial";
+    gap:16px;
+    background-color: rgba(215, 79, 79, 0.2);
+  }
+
+  .card {
+    background-color: #fff;
+    width: 280px;
+    height: 450px;
+    border-radius: px;
+    box-shadow: 4px 4px 12px #D74F4F;
+    display: flex;
+    
+     
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    height: 40%;
+  }
+  .card h1 {
+    font-size: 1.5rem;
+    color: #D74F4F;
+  }
+  .card h2 {
+    font-size: .9rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    
+   }
+.card li {
+    color:red;
+    font-size: rem;   
+
+}
+
+  .card button {
+    background-color: #D74F4F;
+    height: 40px;
+    border: none;
+    padding: 6px;
+    width: 90%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  .card button:hover {
+    background-color: #D74F4F;
+    cursor: pointer;
+  }
+
+  aside{
+    background-color: rgba(215, 79, 79, 0.1);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    width: 500px;
+    
+  }
+   
+  /* RESPONSIVO */
+
+@media only screen and (max-width: 750px) {
+    #lista-livros {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  
+    .main {
+      height: 400px;
+    }
+  
+    .main {
+      background: url("/Imagens/capa.jpg") no-repeat center center;
+    }
+    
+    body {
+      overflow-x: hidden;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .main h1 {
+      font-size: 1.5rem;
+    }
+  
+    #lista-livros {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+      font-size: 1.125rem;
+    }
+  
+    body {
+      overflow-x: hidden;
+    }
+  }
+
+  
+    
+    

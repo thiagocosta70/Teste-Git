@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avalie seu Pedido</title>
+  <link rel="stylesheet" href="func.css">
+</head>
+<body>
+
+<button onclick="mostrarForm()">Avalie seu Pedido</button>
+
+<div id="formContainer" class="hidden">
+  <form id="avaliacaoForm">
+    <label for="mensagem">Escreva sua mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br>
+    <input type="submit" value="Enviar">
+  </form>
+</div>
+
+<script src="func.js"></script>
+</body>
+</html>

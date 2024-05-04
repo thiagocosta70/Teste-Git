@@ -1,0 +1,39 @@
+.card {
+    border: 10px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 10px;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.info p {
+    margin-bottom: 10px;
+}
+
+.info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info ul li {
+    margin-bottom: 5px;
+}
