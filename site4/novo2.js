@@ -1,85 +1,108 @@
-const produtos = document.querySelectorAll(".filtros-cardapio>li>button");
+const avaliarBtn = document.getElementById('avaliarBtn');
+const avaliacaoContainer = document.getElementById('avaliacaoContainer');
+const estrelas = document.querySelectorAll('.estrela');
 
-produtos.forEach(element => {
-    element.addEventListener("click", handleButtonClick);
+const avaliarBtn1 = document.getElementById('avaliarBtn');
+const avaliacaoContainer1 = document.getElementById('avaliacaoContainer');
+const estrelas1 = document.querySelectorAll('.estrela');
+
+avaliarBtn.addEventListener('click', () => {
+  avaliacaoContainer.classList.remove('hidden');
 });
 
-window.addEventListener('load', function() {
-    const activePill = this.document.querySelector(".filtros-cardapio .active");
-    const pillName = activePill.getAttribute('aria-controls');
-    const pillCards = document.getElementById(pillName);
-    const cardapioSection = pillCards.querySelector('.cardapio-items');
-    const carouselItem = pillCards.querySelectorAll('.carousel-item');
-    const cardQuantity = carouselItem.length;
-    if (cardQuantity < 4) {
-        updateCardSize(cardQuantity, carouselItem, cardapioSection);
-    }
+estrelas.forEach(estrela => {
+  estrela.addEventListener('click', () => {
+    const valor = estrela.getAttribute('data-valor');
+    alert('Você avaliou seu pedido como ' + valor + ' estrelas.');
+    // Aqui você pode enviar o valor para o servidor ou fazer qualquer outra ação desejada.
+  });
 });
 
-function handleButtonClick() {
-    const pillName = this.getAttribute('aria-controls');
-    const pillCards = document.getElementById(pillName);
-    const cardapioSection = pillCards.querySelector('.cardapio-items');
-    const carouselItem = pillCards.querySelectorAll('.carousel-item');
-    const cardQuantity = carouselItem.length;
-    if (cardQuantity < 4) {
-        updateCardSize(cardQuantity, carouselItem, cardapioSection);
-    }
-}
-
-
-function updateCardSize(cardQuantity, carouselItem, cardapioSection) {
-    carouselItem.forEach(element => {
-        element.style.flex = `0 0 calc(100%/${cardQuantity})`
-        if (window.matchMedia("(min-width:576px)").matches) {
-            switch (cardQuantity) {
-                case 1:
-                    percentage = '25%'
-                    break;
-                case 2:
-                    percentage = '35%'
-                    break;
-                case 3:
-                    percentage = '55%'
-                    break;
-                }
-            cardapioSection.style.maxWidth = percentage;
-        }
+document.addEventListener("DOMContentLoaded", function() {
+    const startButton = document.getElementById("startButton");
+    const timerElement = document.getElementById("timer");
+     
+    let timer;
+    let timeLeft = 18 * 60; // 15 minutos em segundos
+  
+    startButton.addEventListener("click", function() {
+      if (!timer) {
+        timer = setInterval(updateTimer, 1000);
+        updateTimer();
+      }
     });
+  
+    function updateTimer() {
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        timer = null;
+        timerElement.textContent = "Tempo esgotado!";
+      } else {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        timeLeft--;
+      }
+    }
+  });
 
-}
-
-const carousels = document.querySelectorAll('.carousel-inner');
-const multipleItemCarousel = document.querySelectorAll('.carousel');
-
-carousels.forEach(function(carousel) {
-    if (window.matchMedia("(min-width:576px)").matches) {
-        var cardWidth = carousel.querySelector('.carousel-item').offsetWidth;
-
-        var scrollPosition = 0
-
-        carousel.parentElement.querySelector('.carousel-control-next').addEventListener('click', function(){
-            var carouselWidth = carousel.scrollWidth;
-            var cardWidth = carousel.querySelector('.carousel-item').offsetWidth;
-            if (scrollPosition < (carouselWidth - (cardWidth * 5))) {
-                scrollPosition = scrollPosition + cardWidth;
-                carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-            }
-        });
-
-        carousel.parentElement.querySelector('.carousel-control-prev').addEventListener('click', function(){
-            var cardWidth = carousel.querySelector('.carousel-item').offsetWidth;
-            if (scrollPosition > 0) {
-                scrollPosition = scrollPosition - cardWidth;
-                carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-            }
-        });
-
-        scrollPosition = scrollPosition + cardWidth;
-    } 
-    else {
-        multipleItemCarousel.forEach(element => {
-            element.parentElement.classList.add('slide');
-        });
+  document.addEventListener("DOMContentLoaded", function() {
+    const iniciarBotao = document.getElementById("iniciarBotao");
+    const elementoTemporizador = document.getElementById("temporizador");
+     
+    let temporizador;
+    let tempoRestante = 22 * 60; // 15 minutos em segundos
+  
+    iniciarBotao.addEventListener("click", function() {
+      if (!temporizador) {
+        temporizador = setInterval(atualizarTemporizador, 1000);
+        atualizarTemporizador();
+      }
+    });
+  
+    function atualizarTemporizador() {
+      if (tempoRestante <= 0) {
+        clearInterval(temporizador);
+        temporizador = null;
+        elementoTemporizador.textContent = "Tempo esgotado!";
+      } else {
+        const minutos = Math.floor(tempoRestante / 60);
+        const segundos = tempoRestante % 60;
+        elementoTemporizador.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+        tempoRestante--;
+      }
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const botaoInicio = document.getElementById("botaoInicio");
+    const elementoTemporizador = document.getElementById("elementoTemporizador");
+     
+    let temporizador;
+    let tempoRestante = 39 * 60; // 15 minutos em segundos
+  
+    botaoInicio.addEventListener("click", function() {
+      if (!temporizador) {
+        temporizador = setInterval(atualizarTemporizador, 1000);
+        atualizarTemporizador();
+      }
+    });
+  
+    function atualizarTemporizador() {
+      if (tempoRestante <= 0) {
+        clearInterval(temporizador);
+        temporizador = null;
+        elementoTemporizador.textContent = "Tempo esgotado!";
+      } else {
+        const minutos = Math.floor(tempoRestante / 60);
+        const segundos = tempoRestante % 60;
+        elementoTemporizador.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+        tempoRestante--;
+      }
+    }
+});
+
+  
+
+  
+  

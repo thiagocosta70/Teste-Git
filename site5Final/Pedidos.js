@@ -13,7 +13,7 @@ avaliarBtn.addEventListener('click', () => {
 estrelas.forEach(estrela => {
   estrela.addEventListener('click', () => {
     const valor = estrela.getAttribute('data-valor');
-    alert('Você avaliou seu pedido como ' + valor + ' estrelas.');
+    alert('Você avaliou seu pedido como ' + valor + ' estrelas. Obrigado!');
     // Aqui você pode enviar o valor para o servidor ou fazer qualquer outra ação desejada.
   });
 });
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const timerElement = document.getElementById("timer");
      
     let timer;
-    let timeLeft = 15 * 60; // 15 minutos em segundos
+    let timeLeft = 18 * 60; // 15 minutos em segundos
   
     startButton.addEventListener("click", function() {
       if (!timer) {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (timeLeft <= 0) {
         clearInterval(timer);
         timer = null;
-        timerElement.textContent = "Tempo esgotado!";
+        timerElement.textContent = "Pedido Pronto!";
       } else {
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementoTemporizador = document.getElementById("temporizador");
      
     let temporizador;
-    let tempoRestante = 25 * 60; // 15 minutos em segundos
+    let tempoRestante = 22 * 60; // 15 minutos em segundos
   
     iniciarBotao.addEventListener("click", function() {
       if (!temporizador) {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (tempoRestante <= 0) {
         clearInterval(temporizador);
         temporizador = null;
-        elementoTemporizador.textContent = "Tempo esgotado!";
+        elementoTemporizador.textContent = "Pedido Pronto!";
       } else {
         const minutos = Math.floor(tempoRestante / 60);
         const segundos = tempoRestante % 60;
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementoTemporizador = document.getElementById("elementoTemporizador");
      
     let temporizador;
-    let tempoRestante = 40 * 60; // 15 minutos em segundos
+    let tempoRestante = 9 * 60; // 15 minutos em segundos
   
     botaoInicio.addEventListener("click", function() {
       if (!temporizador) {
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (tempoRestante <= 0) {
         clearInterval(temporizador);
         temporizador = null;
-        elementoTemporizador.textContent = "Tempo esgotado!";
+        elementoTemporizador.textContent = "Pedido Pronto!";
       } else {
         const minutos = Math.floor(tempoRestante / 60);
         const segundos = tempoRestante % 60;
@@ -101,8 +101,3 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
 });
-
-  
-
-  
-  
