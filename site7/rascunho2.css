@@ -1,0 +1,99 @@
+/* estrela final */
+
+const avaliarBtn = document.getElementById('avaliarBtn');
+const avaliacaoContainer = document.getElementById('avaliacaoContainer');
+const estrelas = document.querySelectorAll('.estrela');
+
+avaliarBtn.addEventListener('click', () => {
+  avaliacaoContainer.classList.remove('hidden');
+});
+
+estrelas.forEach(estrela => {
+  estrela.addEventListener('click', () => {
+    const valor = estrela.getAttribute('data-valor');
+    alert('Você avaliou seu pedido como ' + valor + ' estrelas. Obrigado!');
+    estrela.classList.add('selecionada');
+    
+    // Armazena a informação da avaliação no localStorage
+    localStorage.setItem('avaliacaoPedido', valor);
+    
+    // Altera o texto do botão e desativa o clique nas estrelas após a avaliação
+    avaliarBtn.textContent = 'Pedido Avaliado';
+    estrelas.forEach(estrela => estrela.removeEventListener('click'));
+  });
+});
+
+
+/* novas estrelas */
+
+document.addEventListener("DOMContentLoaded", function() {
+    const botaoInicio = document.getElementById("botaoInicio");
+    const elementoTemporizador = document.getElementById("elementoTemporizador");
+    const avaliarBtn = document.getElementById('avaliarBtn');
+    const avaliacaoContainer = document.getElementById('avaliacaoContainer');
+    const estrelas = document.querySelectorAll('.estrela');
+  
+    let temporizador;
+    let tempoRestante = 1 * 60; // 15 minutos em segundos
+  
+    botaoInicio.addEventListener("click", function() {
+        if (!temporizador) {
+            temporizador = setInterval(atualizarTemporizador, 1000);
+            atualizarTemporizador();
+        }
+    });
+  
+    function atualizarTemporizador() {
+        if (tempoRestante <= 0) {
+            clearInterval(temporizador);
+            temporizador = null;
+            alert("Gentileza buscar seu pedido");
+            elementoTemporizador.textContent = "Pedido Pronto!";
+            // Mudar o texto do botão para "Pedido Pronto"
+            botaoInicio.textContent = "Pedido Pronto";
+            // Mostrar o botão de avaliação
+            avaliacaoContainer.classList.remove('hidden');
+        } else {
+            const minutos = Math.floor(tempoRestante / 60);
+            const segundos = tempoRestante % 60;
+            elementoTemporizador.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+            tempoRestante--;
+        }
+      }
+  });
+
+  
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const botaoInicio = document.getElementById("botaoInicio");
+    const elementoTemporizador = document.getElementById("elementoTemporizador");
+    const avaliarBtn = document.getElementById('avaliarBtn');
+    const avaliacaoContainer = document.getElementById('avaliacaoContainer');
+    const estrelas = document.querySelectorAll('.estrela');
+  
+    let temporizador;
+    let tempoRestante = 1 * 60; // 15 minutos em segundos
+  
+    botaoInicio.addEventListener("click", function() {
+        if (!temporizador) {
+            temporizador = setInterval(atualizarTemporizador, 1000);
+            atualizarTemporizador();
+        }
+    });
+  
+    function atualizarTemporizador() {
+        if (tempoRestante <= 0) {
+            clearInterval(temporizador);
+            temporizador = null;
+            alert("Gentileza buscar seu pedido");
+            elementoTemporizador.textContent = "Pedido Pronto!";
+            // Mostrar o botão de avaliação
+            avaliacaoContainer.classList.remove('hidden');
+        } else {
+            const minutos = Math.floor(tempoRestante / 60);
+            const segundos = tempoRestante % 60;
+            elementoTemporizador.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+            tempoRestante--;
+        }
+      }
+    });

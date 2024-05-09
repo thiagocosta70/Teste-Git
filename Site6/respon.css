@@ -7,14 +7,13 @@
     vertical-align: baseline;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    
 }
 
 html, 
 body {
     width: 100%;
     height: calc(100% - 50px);
-    }
+}
 
 :root {
     --branco: #f2f2f2;
@@ -25,7 +24,19 @@ body {
     --vermelho-escuro-2: #750000;
 }
 
-/*Ajustes Navbar*/
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--branco);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--vermelho-escuro);
+    border: 0.2rem solid var(--branco);
+  }
+
 .navbar-nav > .nav-item a {
   font-weight: 500;
   transition: ease-in-out 0.2s;
@@ -35,18 +46,17 @@ body {
     color: var(--vermelho-medio);
   }
 
-
-/* Configurações carrinho */
-.fa-cart-shopping {
-  cursor: pointer;
+  .fa-cart-shopping {
+    cursor: pointer;
 }
 
 .fa-cart-shopping:hover {
-  color: var(--vermelho-escuro);
-  transition: ease-in-out 0.2s;
+    color: var(--vermelho-escuro);
+    transition: ease-in-out 0.2s;
 }
 
 /* Seção do Banner */
+
 .banner-section {
     background-color: rgba(215, 79, 79, 0.);
     height: 200px;
@@ -56,7 +66,7 @@ body {
     background-color: #B13A3A;
     border-radius: 10px;
     max-width: 605px;
-    height: 120px;    
+    height: 120px;
 }
 
 .banner-text > p {
@@ -65,8 +75,6 @@ body {
     font-weight: 700;
     font-size: 26px;
 }
-
-/* Seção do rodapé */
 
 footer > .container > .nav > .nav-item > .nav-link {
     color: var(--vermelho-medio);
@@ -77,53 +85,62 @@ footer > .container > .nav > .nav-item > .nav-link:hover {
     color: var(--vermelho-escuro);
 }
 
-/* Seção da barra de busca */
 
 .search-section {
     width: 300px;
     height: 43px;
-    }
+}
 
 #search-input[type=text] {
     text-align: center;
-    
 }
 
 #search-input::placeholder {
     color: #A6A6A6;
     font-size: 16px;
     text-align: center;
-    }
+}
 
 .lupa {
     background-color: #B13A3A;
-    width: none;
+    width: 40px;
     border: none;
     align-items: flex-start;
     color: #FFF;
 }
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
 
-/* Seção do CARD */
+.card {
+    font-family: Lato;
+    margin: 0 .5em;
+    border-radius: 0;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, .18);
+    color: #CD5C5C;
+    
+}
+.card-title {
+    
+    font-size: 22px;
+    font-weight: 850;
+}
 
 aside {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;     
     justify-content: center;
     align-items: center;
     height: 550px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: "Arial";
     gap:16px;
     background-image: url("");
-    background-color: rgba(215, 79, 79, 0.2);    
+    background-color: rgba(215, 79, 79, 0.2);
+    
 }
-
 main{
     background-color: rgba(215, 79, 79, 0.1);
 }
-
-
-/* Seção de avaliação */
 
 button {
     padding: 10px 20px;
@@ -142,76 +159,77 @@ button {
   .estrela {
     font-size: 20px;
     cursor: pointer;
-    color: #ffd700;         
-  }
-  .selecionada {
-    color: #d74f4f;    
-  }
-
-  .estrela:hover,
-  .estrela.active {
-    color: #d74f4f;     
+    color: #ffd700;
+    
   }
   
-  /* Seção de temporizador */
-
+  .estrela:hover,
+  .estrela.active {
+    color: #d74f4f;
+    
+  }
+  
   #timer {
     font-size: 20px;
     margin-top: auto;
     color: #d74f4f;
-    font-family: Arial, Helvetica, sans-serif;       
+    font-family: Arial, Helvetica, sans-serif;
+       
   }
   
   #temporizador {
     font-size: 20px;
     margin-top: auto;
     color: #d74f4f;
-    font-family: Arial, Helvetica, sans-serif;     
+    
+    
   }
   
   #elementoTemporizador {
     font-size: 20px;
     margin-top: auto;
     color: #d74f4f;
-    font-family: Arial, Helvetica, sans-serif;    
+    
   }
-
   #botaoInicio {
     background-color: #d74f4f;
     border-radius: 14px;
     display: block;
     margin: auto;
   }
-
   #iniciarBotao {
     background-color: #d74f4f;
     border-radius: 14px;
     display: block;
     margin: auto;
   }
-
   #startButton{
     background-color: #d74f4f;
     border-radius: 14px;
     display: block;
     margin: auto;
   }
-
   #avaliarBtn {
     background-color: #d74f4f;
     border-radius: 14px;
     display: block;
     margin: auto;
+  }
+  @media only screen and (min-width: 768px) {
+    .banner-text {
+        max-width: 80%;
     }
-  
 
-    /* Responsividade */
+    .search-section {
+        width: 100%;
+    }
 
+    /* Ajustes para a seção "aside" */
     aside {
         height: auto;
         padding: 20px;
     }
-
+}
 @media only screen and (max-width: 767px) {
     .banner-text {
         max-width: 100%;

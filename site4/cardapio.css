@@ -37,14 +37,7 @@ body {
     border: 0.2rem solid var(--branco);
   }
 
-.navbar-nav > .nav-item a {
-  font-weight: 500;
-  transition: ease-in-out 0.2s;
-}
 
-.navbar-nav > .nav-item a:hover {
-    color: var(--vermelho-medio);
-  }
 
 .fa-cart-shopping {
     cursor: pointer;
