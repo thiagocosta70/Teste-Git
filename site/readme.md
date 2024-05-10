@@ -2,89 +2,70 @@
 
 O template do site foi construído com as linguagens de marcação HTML e CSS, e a linguagem de programação JavaScript foi utilizada para o tratamento dos cadastros e manipulação dos dados.
 
-As páginas terão como elementos padrões o menu de navegação lateral e o container de conteúdo, além dos elementos de identidade visual citados abaixo:
+As páginas terão como elementos padrões o menu de navegação, o header e o footer, além dos elementos de identidade visual citados abaixo:
 
 <ul>
 <li>Cores:
-  azul: #3742FA;
-  azul-escuro: #2F3542;
-  azul-claro variação 1: #F0F9FF;
-  azul-claro variação 2: #74C1ED;
-  verde-claro variação 1: #E4FAE4;
-  verde-claro variação 2: #6CDB77;
-  amarelo-claro: #FEAF00;
-  vermelho: #FE0000;
-  cinza-claro: #F8F9FA;
-  cinza-medio: #ACACAC;
+  --cinza: #e4e4e4;
+  --vermelho-claro: #f7dcdc;
+  --vermelho-medio: #d74f4f;
+  --vermelho-escuro: #b13a3a;
+  --vermelho-escuro-2: #750000;
+  
 </li>
-<li>Font-family:
-  Montserrat, Noto Sans e sans-serif;
+<li>Font-family: Arvo;
 </li>
 
-O código utilizado para a construção dos elementos citados, incluindo a responsividade, pode ser consultado <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/tree/main/codigo-fonte">aqui</a>. As imagens e ícones utilizados no projeto estão disponíveis <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/tree/main/documentos/img">aqui</a>.
+O código utilizado para a construção dos elementos citados, incluindo a responsividade, pode ser consultado <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t4-pmv-ads-2024-1-e1-proj-fila-facil/tree/main/src">aqui</a>. As imagens e ícones utilizados no projeto estão disponíveis <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t4-pmv-ads-2024-1-e1-proj-fila-facil/tree/main/src/assets/img">aqui</a>.
+
+<hr>
+
+<h3><b>Tela Home</b></h3>
+<p>A Home Page faz uma primeira apresentação a respeito do nosso trabalho, indicando informações e menu de navegação.</p>
+
+![home](https://github.com/thiagocosta70/Teste-Git/assets/164437300/91112f43-08f0-45f4-9fcc-fb9e21b663a8)
+
+  <figcaption> Figura 1 - Tela Home.
+</figure> 
 
 <hr>
 
 <h3><b>Tela de Login</b></h3>
-<p>Formulário com entrada de dados de Usuário e Senha.</p>
-<figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/assets/3586967/54c5dcfd-9aac-4cc2-aba7-73422742b615">
-  <figcaption> Figura 1 - Tela de Login
+<p>Formulário com entrada de dados de Usuário e Senha. .</p>
+ 
+  ![login](https://github.com/thiagocosta70/Teste-Git/assets/164437300/34617fb3-d06b-4d6a-9981-4994633b989c)
+
+
+  <figcaption> Figura 2 - Tela de Login.
+</figure> 
+
+<hr>
+<h3><b>Tela de Cadastro</b></h3>
+<p>A tela de cadastro apresenta os campos para a inserção das informações pessoais do usuário .</p>
+ 
+  ![cadastro](https://github.com/thiagocosta70/Teste-Git/assets/164437300/c3029adc-4af7-4338-95f8-6d75d28842e6)
+
+  <figcaption> Figura 3 - Tela de Cadastro.
 </figure> 
 
 <hr>
 
-<h3><b>Tela de Dashboard</b></h3>
-<p>Exibe Alertas sobre produtos cadastrados, produtos em período de avaliação finalizando e quantitativos de itens cadastrados.</p>
-<figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/assets/3586967/8c7ad403-d685-4569-b4c1-c9e0c730e034">
-  <figcaption> Figura 2 - Tela de Dashboard
-</figure> 
+<h3><b>Tela de Lista de Cardápio</b></h3>
+<p>Exibe itens cadastrados, botões para filtrar o tipo de refeição desejada, além de um input para procurar mais especificamente por um prato.</p>
 
-<hr>
+![cardapio](https://github.com/thiagocosta70/Teste-Git/assets/164437300/5a84cd68-baa7-4950-ae2f-c60b0aa8053d)
 
-<h3><b>Tela de Lista de Desejos</b></h3>
-<p>Exibe itens cadastrados, links de ações para cada registro para visualizar, editar e remover o registro e um botão para adição de novo item.</p>
-<figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/assets/3586967/434fcec3-8cd3-462f-a04d-608fd4caa8b2">
-  <figcaption>Figura 3 - Tela de Lista de Desejos
-</figure> 
 
-<hr>
-
-<h3><b>Tela de Quarentena de Compras</b></h3>
-<p>Exibe itens cadastrados, links de ações para cada registro para visualizar, editar e remover o registro e um botão para adição de novo item.</p>
-<figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/assets/3586967/ecd43ab1-dc91-453e-9fc8-b953f85a0e4a">
-  <figcaption>Figura 4 - Tela de Quarentena de Compras
+  <figcaption>Figura 4 - Tela de Lista de Cardápio.
 </figure> 
 
 <hr>
   
 <h3><b>Logotipo</b></h3>
-<p>Para a criação do logotipo da aplicação, foi utilizada a aplicação LOGO (logo.com), com as cores Azul (#3742FA) e Branco (#FFFFFF). A utilização da cor azul está ligada segurança e profissionalismo, de acordo com a [BrandingCompass.](https://brandingcompass.com/branding/color-theory-blue-as-a-branding-color/). O elemento de coração foi utilizado por ser o principal símbolo de listas de desejos.</p>
+<p>Para a criação do logotipo da aplicação utilizamos as cores Vermelho e Branco. A utilização da cor vermelho remete nos empreendimentos gastronômicos, estimula reações cerebrais e corporais, como a aceleração dos batimentos cardíacos e da respiração,álem de aumentar o apetite, de acordo com [SEBRAE] <a href="https://sebrae.com.br/sites/PortalSebrae/artigos/cores-que-estimulam-a-fome-saiba-como-usar-no-seu-restaurante,b2c3425ef7156810VgnVCM1000001b00320aRCRD">link.</a>
+  
+![logoFilaFacil](https://github.com/thiagocosta70/Teste-Git/assets/164437300/135e6e72-d79b-429f-92d0-ef37be533957)
 
-<figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/assets/3586967/82ea29be-431f-4762-8d67-dec24c285a71">
-    <figcaption>Figura 5 - Design da logo WishLinker na no site LOGO.com
-</figure>
 
-<hr>
+Figura 5 - Design da logo FilaFácil.
 
-<figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/assets/3586967/d5a93460-2a7b-42f1-8465-31076bb6b0df">
-    <figcaption>Figura 6 - Logotipo da aplicação WishLinker variação 1 - PRINCIPAL
-</figure>
-
-<hr>
-
-<figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t8-pmv-ads-2023-2-e1-projwishlinker/assets/3586967/c9c943bf-a299-410a-9f32-8bf39e428f83">
-    <figcaption>Figura 7 - Logotipo da aplicação WishLinker variação 2 - ALTERNATIVA
-</figure>
-
-<hr>
-
-<p>Para a iconografia, utilizamos a biblioteca [FontAwesome](https://fontawesome.com/), utilizando ícones específicos para as funcionalidades (Início, Lista de Desejos, Quarentena de Compras e Sair), ações do usuário (Visualizar, Editar e Remover) e também para cada categoria de produto cadastrada na aplicação.</p>
-
-![arcanjos2](https://github.com/thiagocosta70/Teste-Git/assets/164437300/5e7c5151-bf2d-4f8a-a48a-e863752fa550)
