@@ -86,3 +86,5 @@ O código utilizado para a construção dos elementos citados, incluindo a respo
 <hr>
 
 <p>Para a iconografia, utilizamos a biblioteca [FontAwesome](https://fontawesome.com/), utilizando ícones específicos para as funcionalidades (Início, Lista de Desejos, Quarentena de Compras e Sair), ações do usuário (Visualizar, Editar e Remover) e também para cada categoria de produto cadastrada na aplicação.</p>
+
+<img src>
