@@ -1,0 +1,54 @@
+{
+    "CARD1": {
+      "avaliarBtn": "avaliarBtn",
+      "avaliacaoContainer": "avaliacaoContainer",
+      "estrelas": ".estrela",
+      "listeners": {
+        "avaliarBtn": {
+          "event": "click",
+          "callback": "avaliacaoContainer.classList.remove('hidden');"
+        },
+        "estrelas": {
+          "event": "click",
+          "callback": "const valor = estrela.getAttribute('data-valor'); alert('Você avaliou seu pedido como ' + valor + ' estrelas. Obrigado!'); estrela.classList.add('selecionada'); localStorage.setItem('avaliacaoPedido', valor); avaliarBtn.textContent = 'Pedido Avaliado'; estrelas.forEach(estrela => estrela.removeEventListener('click')); estrelas.forEach(estrela => {});"
+        }
+      }
+    },
+    "CARD2": {
+      "startButton": "startButton",
+      "timerElement": "timer",
+      "timeLeft": 720,
+      "listeners": {
+        "startButton": {
+          "event": "click",
+          "callback": "if (!timer) { timer = setInterval(updateTimer, 1000); updateTimer(); }"
+        }
+      }
+    },
+    "CARD3": {
+      "iniciarBotao": "iniciarBotao",
+      "elementoTemporizador": "temporizador",
+      "tempoRestante": 1320,
+      "listeners": {
+        "iniciarBotao": {
+          "event": "click",
+          "callback": "if (!temporizador) { temporizador = setInterval(atualizarTemporizador, 1000); atualizarTemporizador(); }"
+        }
+      }
+    },
+    "CARD4": {
+      "botaoInicio": "botaoInicio",
+      "elementoTemporizador": "elementoTemporizador",
+      "avaliarBtn": "avaliarBtn",
+      "avaliacaoContainer": "avaliacaoContainer",
+      "estrelas": ".estrela",
+      "tempoRestante": 1020,
+      "listeners": {
+        "botaoInicio": {
+          "event": "click",
+          "callback": "if (!temporizador) { temporizador = setInterval(atualizarTemporizador, 1000); atualizarTemporizador(); }"
+        }
+      }
+    }
+  }
+  
